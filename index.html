@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuickNotes API client practice project">
+  <title>QuickNotes | API Client</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="api.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="page-header">
+      <p class="eyebrow">PROJECT 2 · SYSTEM DESIGN</p>
+      <h1>QuickNotes</h1>
+      <p>Practice loading, creating and deleting notes through an API.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="notes-heading">
+      <div class="section-heading">
+        <h2 id="notes-heading">Your notes</h2>
+        <button id="load-btn" type="button">Load notes</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite">Choose “Load notes” to fetch notes from the server.</p>
+      <ul id="notes-list" class="notes-list"></ul>
+    </section>
+
+    <section class="panel" aria-labelledby="create-heading">
+      <h2 id="create-heading">Create a note</h2>
+      <form id="note-form">
+        <div class="form-field">
+          <label for="title-input">Title <span aria-hidden="true">*</span></label>
+          <input id="title-input" name="title" type="text" maxlength="100" required
+                 aria-describedby="title-help" placeholder="e.g. Ideas for today">
+          <small id="title-help">Required · 100 characters maximum.</small>
+        </div>
+        <div class="form-field">
+          <label for="body-input">Note body <span class="optional">(optional)</span></label>
+          <textarea id="body-input" name="body" rows="4" placeholder="Write your note here..."></textarea>
+        </div>
+        <button id="submit-btn" type="submit">Create note</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>Learning project using JSONPlaceholder. Changes are simulated and are not permanently saved.</p>
+    </footer>
+  </main>
+</body>
+</html>
